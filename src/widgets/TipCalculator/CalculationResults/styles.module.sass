@@ -1,0 +1,35 @@
+@use '../../../styles/variables'
+
+.root
+    display: flex
+    flex-direction: column
+    gap: 20px
+
+    background-color: variables.$veryDarkCyan
+    padding: 38px 22px 24px
+    margin: 0 -8px
+    border-radius: 15px
+
+.item
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.itemText
+    display: flex
+    flex-direction: column
+
+.itemText
+    color: variables.$white
+
+    .modifier
+        font-size: 14px
+        color: variables.$grayishCyan
+
+.itemValue
+    font-size: calc(variables.$fontSize * 1.3)
+    font-weight: variables.$fontWeight
+    color: variables.$strongCyan
+
+.button
+    margin-top: 14px

@@ -1,0 +1,21 @@
+@use '../../styles/variables'
+
+.button
+    width: 100%
+    min-height: 48px
+    border-radius: 6px
+    border: none
+    outline: none
+    text-transform: uppercase
+    font-size: 20px
+    font-weight: variables.$fontWeight
+    font-family: variables.$fontFamily
+
+    background-color: variables.$strongCyan
+    color: variables.$veryDarkCyan
+
+    transition: all .5s
+
+    &.disabled
+        pointer-events: none
+        opacity: .3

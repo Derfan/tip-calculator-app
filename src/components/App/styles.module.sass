@@ -1,0 +1,31 @@
+@use '../../styles/variables'
+
+*
+    box-sizing: border-box
+
+html, body
+    min-height: 100vh
+
+    padding: 0
+    margin: 0
+
+body
+    font-family: variables.$fontFamily
+
+    background: variables.$lightGrayishCyan
+
+input
+    font-family: variables.$fontFamily
+    font-weight: variables.$fontWeight
+    font-size: variables.$fontSize
+
+#root, .container
+    min-height: 100vh
+
+.container
+    padding-top: 144px
+
+    background-image: url('../../images/logo.svg')
+    background-repeat: no-repeat
+    background-position: center 50px
+    background-attachment: fixed

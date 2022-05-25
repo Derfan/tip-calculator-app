@@ -1,0 +1,38 @@
+@use '../../styles/variables'
+
+.label
+    display: inline-block
+    color: variables.$darkGrayishCyan
+    font-size: 16px
+    margin-bottom: 14px
+
+.elements
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 14px
+
+.item
+    min-height: 50px
+
+.itemLabel
+    display: flex
+    align-items: center
+    justify-content: center
+
+    font-size: variables.$fontSize
+    font-weight: variables.$fontWeight
+    color: variables.$white
+
+    background-color: variables.$veryDarkCyan
+    border-radius: 7px
+    padding: 5px
+    height: 100%
+
+    transition: all .5s
+
+.itemInput
+    display: none
+
+    &:checked + .itemLabel
+        color: variables.$veryDarkCyan
+        background-color: variables.$strongCyan

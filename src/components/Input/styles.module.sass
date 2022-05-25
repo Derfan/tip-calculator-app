@@ -1,0 +1,40 @@
+@use '../../styles/variables'
+
+.root
+    display: flex
+    flex-direction: column
+
+.header
+    font-size: 16px
+
+.label
+    display: inline-block
+    color: variables.$darkGrayishCyan
+    margin-bottom: 5px
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button
+    -webkit-appearance: none
+    opacity: 0
+
+.input
+    -moz-appearance: textfield
+
+.input
+    min-height: 50px
+    width: 100%
+    border: none
+    border-radius: 10px
+    outline: none
+    color: variables.$veryDarkCyan
+    text-align: right
+    padding: 7px 17px 7px 40px
+
+    background-color: variables.$veryLightGrayishCyan
+    background-repeat: no-repeat
+    background-position: 19px center
+
+    transition: all .5s
+
+    &::placeholder
+        color: variables.$lightGrayishCyan
