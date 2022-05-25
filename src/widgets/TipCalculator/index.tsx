@@ -39,8 +39,8 @@ export const TipCalculator = () => {
                 >
                     <Input
                         type='number'
-                        name='tip'
-                        value={formState.tip}
+                        name='customTip'
+                        value={formState.customTip}
                         placeholder="Custom"
                         className={cn.customInput}
                         onChange={changeFormField}
