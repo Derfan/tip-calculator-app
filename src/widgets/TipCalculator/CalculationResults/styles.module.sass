@@ -10,6 +10,10 @@
     margin: 0 -8px
     border-radius: 15px
 
+    @media (min-width: 1024px)
+        margin: -20px 0
+        padding: 38px 40px 24px
+
 .item
     display: flex
     justify-content: space-between
@@ -31,5 +35,11 @@
     font-weight: variables.$fontWeight
     color: variables.$strongCyan
 
+    @media (min-width: 1024px)
+        font-size: calc(variables.$fontSize * 1.7)
+
 .button
     margin-top: 14px
+
+    @media (min-width: 1024px)
+        margin-top: auto

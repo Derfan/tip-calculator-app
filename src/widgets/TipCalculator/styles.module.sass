@@ -9,10 +9,25 @@
     padding: 32px
     border-radius: 25px 25px 0 0
 
+    @media (min-width: 1024px)
+        flex-direction: row
+
+        max-width: 920px
+        margin: 0 auto
+
+        border-radius: 25px
+
+        padding: 45px 32px 45px 48px
+        gap: 48px
+
 .controllers
     display: flex
     flex-direction: column
     gap: 32px
+
+    @media (min-width: 1024px)
+        flex: 1
+        gap: 40px
 
 .customInput
 
@@ -22,3 +37,8 @@
 
         &::placeholder
             color: variables.$darkGrayishCyan
+
+.results
+    @media (min-width: 1024px)
+        flex: 0
+        min-width: 413px

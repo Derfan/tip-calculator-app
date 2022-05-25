@@ -59,6 +59,7 @@ export const TipCalculator = () => {
             </div>
 
             <CalculationResults
+                className={cn.results}
                 tipAmountPerPerson={formState.tipAmountPerPerson}
                 totalAmountPerPerson={formState.totalAmountPerPerson}
                 onResetButtonClick={resetForm}
