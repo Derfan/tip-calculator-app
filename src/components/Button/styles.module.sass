@@ -1,6 +1,7 @@
 @use '../../styles/variables'
 
 .button
+    cursor: pointer
     width: 100%
     min-height: 48px
     border-radius: 6px
@@ -15,6 +16,9 @@
     color: variables.$veryDarkCyan
 
     transition: all .5s
+
+    &:hover
+        background-color: variables.$lightGrayishCyan
 
     &.disabled
         pointer-events: none

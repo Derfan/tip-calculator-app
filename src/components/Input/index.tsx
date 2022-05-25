@@ -17,14 +17,17 @@ interface InputProps {
 export const Input: FC<InputProps> = ({ type, name, label, placeholder, error, className, icon, defaultValue }) => {
     return (
         <div className={cns(cn.root, className)}>
-            <div className={cn.header}>
-                {label && <label className={cn.label} htmlFor={name}>{label}</label>}
-                {error && <p>{error}</p>}
-            </div>
+            {label && (
+                <div className={cn.header}>
+                    <label className={cn.label} htmlFor={name}>{label}</label>
+                    {error && <p className={cn.error}>{error}</p>}
+                </div>
+            )}
+
             <input
                 id={name}
                 type={type}
-                className={cn.input}
+                className={cns(cn.input, { [cn.error]: error })}
                 placeholder={placeholder}
                 defaultValue={defaultValue}
                 style={{ backgroundImage: icon ? `url(${icon})` : 'none' }}

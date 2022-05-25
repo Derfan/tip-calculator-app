@@ -12,16 +12,16 @@ export const TipCalculator = () => {
         <form className={cn.root}>
             <div className={cn.controllers}>
                 <Input
-                    name='bill'
-                    label='Bill'
-                    type='number'
+                    name="bill"
+                    label="Bill"
+                    type="number"
                     icon={billIcon}
                     placeholder="0"
                 />
 
                 <RadioGroup
-                    name='tip'
-                    label='Select Tip %'
+                    name="tip"
+                    label="Select Tip %"
                     items={[
                         { label: '5%', value: 5 },
                         { label: '10%', value: 10 },
@@ -39,11 +39,11 @@ export const TipCalculator = () => {
                 </RadioGroup>
 
                 <Input
-                    type='number'
+                    type="number"
                     placeholder="0"
                     icon={personIcon}
-                    name='numberOfPeople'
-                    label='Number of People'
+                    name="numberOfPeople"
+                    label="Number of People"
                 />
             </div>
 

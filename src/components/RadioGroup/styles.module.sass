@@ -11,10 +11,14 @@
     grid-template-columns: repeat(2, 1fr)
     gap: 14px
 
+    @media (min-width: 700px)
+        grid-template-columns: repeat(3, 1fr)
+
 .item
     min-height: 50px
 
 .itemLabel
+    cursor: pointer
     display: flex
     align-items: center
     justify-content: center
@@ -29,6 +33,10 @@
     height: 100%
 
     transition: all .5s
+
+    &:hover
+        color: variables.$veryDarkCyan
+        background-color: variables.$lightGrayishCyan
 
 .itemInput
     display: none
