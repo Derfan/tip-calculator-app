@@ -6,6 +6,7 @@ import cn from './styles.module.sass';
 interface CalculationResultsProps {
     tipAmountPerPerson: number
     totalAmountPerPerson: number
+    onResetButtonClick: () => void
 }
 
 const formatCurrency = (amount: number): string => {
@@ -14,7 +15,7 @@ const formatCurrency = (amount: number): string => {
     return formatter.format(amount);
 };
 
-export const CalculationResults: FC<CalculationResultsProps> = ({ tipAmountPerPerson, totalAmountPerPerson }) => {
+export const CalculationResults: FC<CalculationResultsProps> = ({ tipAmountPerPerson, totalAmountPerPerson, onResetButtonClick }) => {
     return (
         <div className={cn.root}>
             <div className={cn.item}>
@@ -36,6 +37,7 @@ export const CalculationResults: FC<CalculationResultsProps> = ({ tipAmountPerPe
                 type="reset"
                 className={cn.button}
                 disabled={tipAmountPerPerson === 0 || totalAmountPerPerson === 0}
+                onClick={onResetButtonClick}
             >
                 Reset
             </Button>

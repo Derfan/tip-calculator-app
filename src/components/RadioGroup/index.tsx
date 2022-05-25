@@ -10,12 +10,18 @@ type Item = {
 
 interface RadioGroupProps {
     name: string
+    value: number
     items: Item[]
     label?: string
     children?: ReactNode
+    onChange: (name: string, field: string) => void
 }
 
-export const RadioGroup: FC<RadioGroupProps> = ({ name, label, items, children }) => {
+export const RadioGroup: FC<RadioGroupProps> = ({ name, value: formValue, label, items, children, onChange }) => {
+    function changeHandler(event: any) {
+        onChange(name, event.target.value);
+    }
+
     return (
         <div className={cn.root}>
             <label className={cn.label}>{label}</label>
@@ -23,7 +29,7 @@ export const RadioGroup: FC<RadioGroupProps> = ({ name, label, items, children }
             <div className={cn.elements}>
                 {items.map(({ label, value, checked }) => (
                     <div key={label} className={cn.item}>
-                        <input type="radio" id={label} value={value} name={name} className={cn.itemInput} defaultChecked={checked} />
+                        <input type="radio" id={label} value={value} name={name} className={cn.itemInput} checked={value === formValue} defaultChecked={checked} onChange={changeHandler} />
                         <label htmlFor={label} className={cn.itemLabel}>{label}</label>
                     </div>
                 ))}
