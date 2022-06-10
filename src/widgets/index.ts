@@ -1,1 +1,1 @@
-export { TipCalculator } from './TipCalculator';
+export { TipCalculator } from "./TipCalculator";
