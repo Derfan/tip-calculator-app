@@ -10,7 +10,7 @@ type Item = {
 
 interface RadioGroupProps {
   name: string;
-  value: number;
+  value: string | number | null;
   items: Item[];
   label?: string;
   children?: ReactNode;

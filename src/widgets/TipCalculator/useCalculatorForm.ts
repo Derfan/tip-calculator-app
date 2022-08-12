@@ -7,10 +7,10 @@ enum ACTION_TYPE {
 }
 
 enum FIELD {
-  BILL,
-  TIP,
-  CUSTOM_TIP,
-  NUMBER_OF_PEOPLE,
+  BILL = "bill",
+  TIP = "tip",
+  CUSTOM_TIP = "customTip",
+  NUMBER_OF_PEOPLE = "numberOfPeople",
 }
 
 interface FormReducerState {

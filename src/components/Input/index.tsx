@@ -6,7 +6,7 @@ import cn from "./styles.module.sass";
 interface InputProps {
   type: string;
   name: string;
-  value: string;
+  value: string | number | null;
   icon?: string;
   label?: string;
   error?: string;
